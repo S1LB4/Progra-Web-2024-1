@@ -10,7 +10,7 @@
     margin-bottom: 10px;
 }
 
-.image-transition {
+.image-evolution {
     max-width: 200px;
     height: auto;
     transition: opacity 0.5s ease;
@@ -24,4 +24,7 @@ button{
 .reset-container {
     margin-top: 10px;
     align-items: center;
+}
+.textbtn{
+    color: white;
 }
