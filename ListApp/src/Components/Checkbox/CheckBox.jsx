@@ -1,9 +1,9 @@
 import './checkbox.css'
 
 export function CheckBox() {
-    const data = [{title: 'Add'},{title: 'Complete'},{title: 'Pending'}]
+    const data = [{title: 'Add+'},{title: 'Completed'},{title: 'OnHold'}]
   return (
-    <> 
+    <>
         <div className='check-container'>
         {data.map((d) =>
         <>
