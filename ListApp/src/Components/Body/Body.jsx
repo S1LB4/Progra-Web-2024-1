@@ -6,19 +6,15 @@ import { CheckBox } from '../checkbox/checkbox'
 import { TaskList } from '../TaskList/TasksList';
 
 function Body() {
+  const { tasks, createTask, completeTask, deleteTask, deleteAllTasks } = useTasks();
 
-  const [tasks, setTasks] = useState([initTasks]);
+  const handleCheckChange = (taskId) => {
+    completeTask(taskId)
+  };
 
-useEffect(() => {
+  useEffect(() => {
   window.localStorage.setItem("tasks",  JSON.stringify(tasks));
 }, [tasks])
-const addTasks = (newTasks) => {
-  const update = [...tasks, newTasks];
-  localStorage.setItem("tasks", JSON.stringify(update));
-  setTasks(update);
-};
-
-
 
   return (
     <>
@@ -28,14 +24,16 @@ const addTasks = (newTasks) => {
       <AddTask onAddTask={addTasks} />
       {
         tasks.length > 0
-      ? ( <TaskList tasks={tasks} />)
-      : (<p>No tasks added yet</p>)
+      ? ( <TaskList tasks={tasks} onCheckChange={handleCheckChange} onDeleteTask={handleDeleteTask} />)
+      : (<p>No tasks added yet...</p>)
       }
     </div>
-
+      <div>
+        {tasks.length > 0 && <DownBar tasks={tasks} onCompleteTasks={deleteAllTasks} />}
+      </div>
     </div>
     </>
-  )
+  );
 }
 
 export default Body
