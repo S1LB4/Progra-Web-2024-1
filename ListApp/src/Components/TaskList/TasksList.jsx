@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Button } from '../Button/Button';
 import './TasksList.css'
 
@@ -17,7 +16,8 @@ export function TasksList({ tasks, onCheckChange, onDeleteTask}) {
       <h3>Tasks To Do:</h3>
       <div className='tasks-container'>
       <ul>
-        {tasks.map((task) => (<li key={task.id} className="task-main-container">
+        {tasks.map((task) => (
+        <li key={task.id} className="task-main-container">
               <div className="checkbox-title">
                 <input
                   className="checkbox"
@@ -34,12 +34,7 @@ export function TasksList({ tasks, onCheckChange, onDeleteTask}) {
                   {task.title}
                 </span>
               </div>
-              <Button
-                title="delete"
-                onClick={() => handleDeleteTask(task.id)}
-              >
-                Delete
-              </Button>
+              <Button title="delete" onClick={() => handleDeleteTask(task.id)}> Delete </Button>
             </li>
         ))}
       </ul>

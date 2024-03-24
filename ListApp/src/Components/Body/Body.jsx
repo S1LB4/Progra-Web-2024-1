@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react'
-import './Body.css'
+import { useEffect } from 'react'
+import { useTasks } from '../../hooks/useTask';
 import { AddTask } from "../AddTask/AddTask"
-import { CheckBox } from '../checkbox/checkbox'
-// import { TaskContainer } from '../Task/Task'
-import { TaskList } from '../TaskList/TasksList';
+import { TaskList } from '../TaskList/TaskList';
+import './Body.css'
+import { DownBar } from '../DownBar/DownBar';
+
 
 function Body() {
   const { tasks, createTask, completeTask, deleteTask, deleteAllTasks } = useTasks();

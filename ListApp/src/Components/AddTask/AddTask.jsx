@@ -30,7 +30,7 @@ export function AddTask({ onAddTask }) {
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
         placeholder="Enter a new task"
-        className='add-task__input' />
+        className='add-task__input'/>
       <button onClick={handleAddTask}>Add Task</button>
     </div>
   );
