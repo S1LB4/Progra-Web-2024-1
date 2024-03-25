@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useTasks } from '../../hooks/useTask'
 import { AddTask } from '../AddTask/AddTask'
 import { TaskList } from '../TaskList/TaskList'
-import './Body.css'
 import { DownBar } from '../DownBar/DownBar'
 import { Filter } from '../Filter/Filter'
+import './Body.css'
 
 export function Body () {
   const { tasks, createTask, completeTask, deleteTask, completeAllTasks } = useTasks()
@@ -54,7 +54,7 @@ export function Body () {
           <Filter onSelectOption={handleFilterChange} />
           {actualTasks.length > 0
             ? (<TaskList tasks={actualTasks} onCheckChange={handleCheckChange} onDeleteTask={handleDeleteTask}/>)
-            : (<p>You're up do date!</p> )}
+            : (<p>Keep on doing what you are doing! You are great</p> )}
         </div>
         <div>
         {tasks.length > 0 && <DownBar tasks={tasks} onCompleteTasks={completeAllTasks} onClearAll={deleteAllTasks} />}
