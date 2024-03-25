@@ -48,7 +48,7 @@ export function Body () {
     <>
       <div className='body'>
       <div>
-          <h2>ToDo List App</h2>
+          <h2>List App</h2>
           <p />
           <AddTask onAddTask={createTask} />
           <Filter onSelectOption={handleFilterChange} />
