@@ -17,8 +17,8 @@ export function DownBar ({ tasks, onCompleteTasks, onClearAll }) {
     <div>
       <p className='text'>{completedTasks}</p>
       <div>
-        <Button title='Complete Tasks' onClick={() => onCompleteTasks()} />
-        <Button title='Clear All' onClick={() => onClearAll()} />
+        <Button title=' Tasks Completed' onClick={() => onCompleteTasks()} />
+        <Button title='Clear All Tasks' onClick={() => onClearAll()} />
       </div>
 
     </div>
