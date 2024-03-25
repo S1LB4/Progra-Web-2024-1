@@ -20,7 +20,7 @@ export function Filter ({ onSelectOption }) {
       </div>
 
       <div className='allindiv'>
-        <input className='inputsel' type='radio' name='filterOption' value='Pending' checked={selectedOption === 'Pending'} onChange={handleOptionChange} /> <p>Pending</p>
+        <input className='inputsel' type='radio' name='filterOption' value='Pending' checked={selectedOption === 'Pending'} onChange={handleOptionChange} /> <p>On Hold</p>
       </div>
     </div>
   )
